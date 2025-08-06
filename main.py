@@ -80,7 +80,7 @@ async def handler(event):
 
 async def main():
     print("🔁 Обрабатываю последние 10 сообщений...")
-    async for msg in client.iter_messages(TARGET_CHAT, limit=10, reverse=False):
+    async for msg in client.iter_messages(TARGET_CHAT, limit=5, reverse=False):
         await process_message(msg)
         print("🟢 Сработал")
 
